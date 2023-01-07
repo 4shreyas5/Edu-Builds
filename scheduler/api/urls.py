@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import fetch_form
+from .views import AddUserView, AddCourseView
 
 urlpatterns = [
-    path('form-submit/', fetch_form)
+    path('add-user/', AddUserView.as_view()),
+    path('add-course/', AddCourseView.as_view())
 ]

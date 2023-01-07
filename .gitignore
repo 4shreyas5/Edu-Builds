@@ -1,5 +1,3 @@
-scheduler/frontend/node_modules
-# __pycache__
-*.pyc
+**/node_modules
+**/__pycache__
 
-scheduler/api/migrations/*

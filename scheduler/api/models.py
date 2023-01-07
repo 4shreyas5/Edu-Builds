@@ -1,7 +1,7 @@
 from django.db import models
 
 # Model to handle the Users
-class MyUsers(models.Model):
+class MyUser(models.Model):
     """
     User will have a username and a passwd
     """
@@ -11,7 +11,7 @@ class MyUsers(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
 # Model to handle the users
-class Courses(models.Model):
+class Course(models.Model):
     """
     Courses will contain the information on:
     course-name
@@ -22,4 +22,6 @@ class Courses(models.Model):
     name = models.CharField(null=False, max_length=50)
     url = models.CharField(null=False, max_length=200)
     duration = models.IntegerField(null=False)
-    user_id = models.ForeignKey(MyUsers, null=False, on_delete=models.CASCADE)
+    # user_ref = models.ForeignKey(MyUser, null=True, on_delete=models.CASCADE)
+    username = models.CharField(null=False, max_length=20, default="root")
+
